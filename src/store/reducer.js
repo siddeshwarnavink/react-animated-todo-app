@@ -69,10 +69,8 @@ function updateTodo(state, action) {
 
 function deleteTodo(state, action) {
   const updatedTodos = state.todos.filter((todoItem) => {
-    return todoItem !== action.id;
+    return todoItem.id !== action.id;
   });
-
-  console.log(action.id);
 
   return updateObject(state, {
     todos: updatedTodos
