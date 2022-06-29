@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-todo,
+.todo-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-todo button,
+.add-todo input {
+  border: 0;
+  outline: none;
+}
+
+.add-todo input {
+  border-bottom: 1px solid #ccc;
+  transition: border-color 100ms ease;
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+.add-todo button {
+  background-color: #4c3a51;
+  color: #efefef;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 12px;
+  transition: background-color 200ms ease;
+}
+
+.add-todo button:hover {
+  background-color: #382a3c;
+}
+
+.add-todo button:disabled {
+  cursor: not-allowed;
+  background-color: #999;
+}
+
+.add-todo input:focus {
+  border-color: #777;
+}
+
+.todo-grid {
+  display: flex;
+}
+
+ul {
+  padding: 0;
+  margin-right: 12px;
+}
+
+.todo-item {
+  list-style: none;
+  background-color: #efefef;
+  padding: 10px;
+  margin-bottom: 12px;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-item button {
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.flyListItemAnimation {
+  animation: flyListItem 2s ease;
+}
+
+.flyUp {
+  animation: flyUp 1s ease;
+}
+
+.fadeAway {
+  animation: fade 1s ease-out;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50px);
+  }
+}
